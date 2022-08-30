@@ -2,11 +2,12 @@ user www-data;
 worker_processes 4; 
 pid /var/run/nginx.pid;
 events {
-     worker_connections 5000;
+     worker_connections 100000;
      use epoll;
-     # multi_accept on; 
-} # took it in next line
-worker_rlimit_nofile    100000;
+     multi_accept on; 
+     worker_rlimit_nofile    100000;
+}
+
 
 http {
      sendfile on;
@@ -19,8 +20,10 @@ http {
      proxy_read_timeout          60000;
      keepalive_requests 1000000;
      reset_timedout_connection on;
+     types_hash_bucket_size 640;
+     client_max_body_size 100000M;
      types_hash_max_size 20408;
-     client_header_buffer_size 5k;
+     client_header_buffer_size 500k;
      open_file_cache max=1000000 inactive=30s;
      open_file_cache_valid    60s;
      open_file_cache_min_uses 2;
