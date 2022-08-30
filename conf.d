@@ -12,11 +12,12 @@ http {
      sendfile on;
      tcp_nopush on;
      tcp_nodelay on;
-     keepalive_timeout 600;
-     send_timeout 600;
-     proxy_connect_timeout       600;
-     proxy_send_timeout          600;
-     proxy_read_timeout          600;
+     keepalive_timeout 60000;
+     send_timeout 60000;
+     proxy_connect_timeout       60000;
+     proxy_send_timeout          60000;
+     proxy_read_timeout          60000;
+     keepalive_requests 1000000;
      reset_timedout_connection on;
      types_hash_max_size 2048;
      client_header_buffer_size 5k;
