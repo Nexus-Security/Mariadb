@@ -20,7 +20,7 @@ http {
      reset_timedout_connection on;
      types_hash_max_size 2048;
      client_header_buffer_size 5k;
-     open_file_cache max=10000 inactive=30s;
+     open_file_cache max=1000000 inactive=30s;
      open_file_cache_valid    60s;
      open_file_cache_min_uses 2;
      open_file_cache_errors   on;
