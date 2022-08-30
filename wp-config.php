@@ -132,10 +132,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
 
-
+set_time_limit(300000);
 define( 'WP_MEMORY_LIMIT', '88888M' );
 define( 'WP_MAX_MEMORY_LIMIT', '88888M' );
 
+@ini_set(‘upload_max_size’ , ’60000M’);
+@ini_set(‘post_max_size’, ’60000M’);
+@ini_set(‘max_execution_time’, ‘300000’);
 
 
 
