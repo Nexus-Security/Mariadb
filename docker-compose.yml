@@ -23,6 +23,7 @@ services:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./conf.d:/etc/nginx/conf.d
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/conf/nginx.conf
     ports:
       - "8000:80"
     restart: always
