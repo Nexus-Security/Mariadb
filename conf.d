@@ -19,7 +19,7 @@ http {
      proxy_read_timeout          60000;
      keepalive_requests 1000000;
      reset_timedout_connection on;
-     types_hash_max_size 2048;
+     types_hash_max_size 20408;
      client_header_buffer_size 5k;
      open_file_cache max=1000000 inactive=30s;
      open_file_cache_valid    60s;
