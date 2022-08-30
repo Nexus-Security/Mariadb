@@ -131,3 +131,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+
+define( 'WP_MEMORY_LIMIT', '88888M' );
+define( 'WP_MAX_MEMORY_LIMIT', '88888M' );
+
+
+
+
+
+
+
+
+
