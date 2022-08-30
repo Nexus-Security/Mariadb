@@ -13,3 +13,10 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+php_value memory_limit 88888M
+php_value upload_max_filesize 60000M
+php_value post_max_size 60000M
+php_value max_execution_time 999999
+php_value max_input_vars 300000
+php_value max_input_time 300000
